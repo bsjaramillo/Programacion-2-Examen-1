@@ -47,8 +47,8 @@ public class Student {
             materia[j].setNota2(keyboard.nextFloat());
             System.out.println ("Ingrese Nota 3 materia 1: ");
             materia[j].setNota3(keyboard.nextFloat());
-            estudiante[i].setProm(Calculo.promedio(materia[j].getNota1()+materia[j].getNota2()+materia[j].getNota3()));
-            estudiante[i].setMateria2(Calculo.comprobacion(estudiante[i].getProm()));
+            materia[j].setProm(Calculo.promedio(materia[j].getNota1()+materia[j].getNota2()+materia[j].getNota3()));
+            estudiante[i].setMateria1(Calculo.comprobacion(materia[j].getProm()));
             j++;
             System.out.println ("Ingrese nombre materia 2: ");
             materia[j].setName(keyboard.next());
@@ -58,8 +58,8 @@ public class Student {
             materia[j].setNota2(keyboard.nextFloat());
             System.out.println ("Ingrese Nota 3 materia 2: ");
             materia[j].setNota3(keyboard.nextFloat());
-            estudiante[i].setProm(Calculo.promedio(materia[j].getNota1()+materia[j].getNota2()+materia[j].getNota3()));
-            estudiante[i].setMateria3(Calculo.comprobacion(estudiante[i].getProm()));
+            materia[j].setProm(Calculo.promedio(materia[j].getNota1()+materia[j].getNota2()+materia[j].getNota3()));
+            estudiante[i].setMateria2(Calculo.comprobacion(materia[j].getProm()));
             j++;
             System.out.println ("Ingrese nombre materia 3: ");
             materia[j].setName(keyboard.next());
@@ -69,8 +69,8 @@ public class Student {
             materia[j].setNota2(keyboard.nextFloat());
             System.out.println ("Ingrese Nota 3 materia 3: ");
             materia[j].setNota3(keyboard.nextFloat());
-            estudiante[i].setProm(Calculo.promedio(materia[j].getNota1()+materia[j].getNota2()+materia[j].getNota3()));
-            estudiante[i].setMateria1(Calculo.comprobacion(estudiante[i].getProm()));
+            materia[j].setProm(Calculo.promedio(materia[j].getNota1()+materia[j].getNota2()+materia[j].getNota3()));
+            estudiante[i].setMateria3(Calculo.comprobacion(materia[j].getProm()));
             estudiante[i].setResult(Calculo.resultadoFinal(estudiante[i].getMateria1(),estudiante[i].getMateria2(),estudiante[i].getMateria3()));
             j++;
         }
@@ -79,15 +79,15 @@ public class Student {
             System.out.println("Estudiante: "+(i+1)+" "+estudiante[i].getName()+" ");
             System.out.println("Materia 1: "+materia[j].getName()+"");
             System.out.println("Nota1:"+materia[j].getNota1()+"\nNota2: "+materia[j].getNota2()+"\nNota3: "+materia[j].getNota3()+"\n");
-            System.out.println("Promedio: "+estudiante[i].getProm()+" Resultado: "+estudiante[i].getMateria1()+"");
+            System.out.println("Promedio: "+materia[j].getProm()+" Resultado: "+estudiante[i].getMateria1()+"");
             j++;
             System.out.println("Materia 2: "+materia[j].getName()+"");
             System.out.println("Nota1:"+materia[j].getNota1()+"\nNota2: "+materia[j].getNota2()+"\nNota3: "+materia[j].getNota3()+"\n");
-            System.out.println("Promedio: "+estudiante[i].getProm()+" Resultado: "+estudiante[i].getMateria2()+"");
+            System.out.println("Promedio: "+materia[j].getProm()+" Resultado: "+estudiante[i].getMateria2()+"");
             j++;
             System.out.println("Materia 3: "+materia[j].getName()+"");
             System.out.println("Nota1:"+materia[j].getNota1()+"\nNota2: "+materia[j].getNota2()+"\nNota3: "+materia[j].getNota3()+"\n");
-            System.out.println("Promedio: "+estudiante[i].getProm()+" Resultado: "+estudiante[i].getMateria3()+"");
+            System.out.println("Promedio: "+materia[j].getProm()+" Resultado: "+estudiante[i].getMateria3()+"");
             System.out.println ("Semestre: "+estudiante[i].getResult()+"");
             j++;
         }
